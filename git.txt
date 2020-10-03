@@ -1,0 +1,41 @@
+git init        // Iniciar versionamento no diretório
+
+git clone       // Clona repositório remoto
+
+git add . ou git add <<nome do arquvivo>>       // Adicionar arquivos ao versionamento (add . irá adicionar todos os arquivos não monitorados)
+
+git commit -m "Mensagem"        // Juntar as alterações em um pacote e enviar uma descrição
+
+git push        // Enviar alterações para repositório remoto
+
+git pull        // Receber alterações de repositório remoto
+
+git merge <<branch>>        // Verificar mesclagem de arquivos e branches
+
+git status      // Informações sobre o repositório
+
+git log         // Histórico de alterações do repositório
+
+git branch <<nome da branch>>       // Criar ramificação
+
+git remote add origin https://...       // Adicionar uma origem de repositório remoto
+
+git remote rm origin        // Deletar uma origin remota
+
+git push -u origin master       // Enviar arquivos para a origem origin na branch master
+
+git checkout -b <<Nome da branch>>      // Criar branch e trocar para ela
+
+git branch -D <<Nome da branch>>        // Deletar branch
+
+git push origin <<branch>>          // Enviar branch para repositório remoto
+
+git commit --amend      // Alterar a mensagem do ultimo commit
+
+git config      // Configurações do Git
+    git config --global user.email "email@email.com"        // Configurar email
+    git config --global user.name "Name"        // Configurar nome
+    git config pull.rebase false       // Definir o merge com padão do git pull
+    git config –global http.proxy meu.servidor:8080        // Configurar proxy do Git
+
+

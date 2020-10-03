@@ -1,0 +1,87 @@
+SQL - Structured Query Language
+
+TIPOS PRIMITIVOS
+    Numéricos
+        Inteiro
+            TinyInt, SmallInt, Int, MediumInt, BigInt
+
+        Reais
+            Decimal, Float, Double, Real
+
+        Lógico
+            Bit, Boolean
+
+    Datas/Tempo
+        Date, DateTime, TimeStamp, Time, Year
+
+    Literal
+        Caractere - Textos Pequenos
+            Char, Varchar
+
+        Texto - Textos Longos
+            TinyText, Text, Mediumtext, LongText
+
+        Binário
+            TinyBlob, Blob, MediumBlob, LongBlob
+
+        Coleção - Apenas valores permitidos
+
+            Enum, Set 
+
+    Espacial - Volumétricos
+        Geometry, Point, Polygon, MultiPolygon
+
+DDL - Data Definition Language
+
+    USE nomedobanco; - Usar banco de dados
+
+    CREATE DATABASE nomedobanco; - Criar banco de dados
+    
+        CREATE DATABASE nomedobanco         - Criar banco de dados com constraint e collation de caracteres.
+        DEFAULT CHARACTER SET utf8
+        DEFAULT COLLATION utf8_general_ci;
+    
+    DROP DATABASE nomedobanco; - Apagar banco de dados
+
+    CREATE TABLE nomedatabela IF NOT EXISTS(            - Criar tabela, se não existir
+        id int NOT NULL AUTO_INCREMENT,                 - AUTO_INCREMENT = Definir automaticamente(1,2,3,4...)
+        nome varchar(30) NOT NULL,                      - NOT NULL = Não pode ser nulo.
+        nasc date,
+        sexo enum('M','F'),                             - enum = Serão aceitos apenas "M" ou "F"
+        peso decimal(5,2),                              - Formatação do decimal(5 casas, 2 após a vírgula)
+        altura decimal(3,2),
+        nacionalidade varchar(20) DEFAULT 'Brasil',     - Valor padrão, caso não informado
+        PRIMARY KEY(id)                                 - Definir id como chave primária, como identificador
+    ) DEFAULT CHARSET = utf8;
+
+    DROP DATABASE nomedatabela; - Apagar tabela
+
+DML - Data Manipulation Language
+
+    INSERT INTO nomedatabela
+        (id, nome, nasc, sexo, peso, altura, nacionalidade) - Caso a ordem seja a mesma da tabela, pode ser omitida
+    VALUES
+        (DEFAULT, 'Luan', '2003-06-27', 'M', '60.5', '1.73', 'Brasil');
+
+DQL - Data Query Language
+
+    SHOW DATABASES; - Exibir bancos de dados
+    SHOW TABLES; - Exibir tabelas
+
+    DESCRIBE nomedatabela; - Descrever uma tabela
+
+    SELECT
+        Sintaxe
+
+    status(console) - Mostra o status do servidor
+
+DCL - Data Control Language
+
+DTL - Data Transition Language
+
+    DICA - Características de uma boa transação
+        D - Durabilidade - Todo dado colocado deve permanecer durável.
+        I - Isolamento - Duas ou mais transações não deve interferir na outra.
+        C - Consistência - Antes e após a transação o banco de dados deve permanecer consistente.
+        A - Atomicidade - Toda a transação acontece, ou nada acontece.
+

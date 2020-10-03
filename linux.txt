@@ -1,0 +1,70 @@
+clear ( ou ctrl + l ) - Limpar a tela
+
+pwd - mostra localização
+
+cd - se mover para pastas (cd / - mover para raiz; cd .. - voltar uma pasta; cd *enter* - ir para diretório do usário)
+
+ls - listar estrutura de diretórios (ls -la - listar detalhadamente)
+
+date - exibe data e hora
+
+cal - exibe calendário
+
+; - usado para executar mais de um comando em uma linha
+
+reboot - reinicia a máquina
+
+halt - desliga a máquina
+
+shutdown -h *tempo em minutos* - desliga a máquina - ctrl + c - interrompe o comando
+
+mkdir *nome do diretorio* - criar diretorios
+
+rm -r - apagar (rm -rf - apagar pastas e arquivos sem questionar)
+
+history - lista os ultimos 1000 comandos executados
+
+echo texto - Retornar texto
+
+vi - editor de texto
+      (se aperta "i" para começar a escrever)
+      esc + : - ativar modo comando
+        wr - salvar e sair
+   
+ARCH LINUX
+   pacman - Gerenciador de pacotes
+
+   pacman -S - Instalar
+
+   pacman -R - Desinstalar
+
+   pacman -Q - Listar instalados
+
+Comandos de rede
+   ip addr show ou ip a - Listar ips das placas de rede
+      ip -4 a - Listar ips apenas do protocolo IPV4
+      ip -6 a - Listar ips apenas do protocolo IPV6
+
+   ip link show ou ip l - Listar interfaces de rede
+
+   ip link set eth0 up ou ip l set eth0 up - Ativar placa de rede (eth0)
+
+   ip link set enp0s3 down - Desativar placa de rede 
+
+   ip addr add 192.168.0.20/24 dev eth0 - Adicionar ip (192.168.0.20) sem sub redes a placa(eth0)
+
+   ip addr del 192.168.12.100/24 dev enp0s3 - Excluir ip de interface
+
+   ip link set enp0s3 name eth0 - Alterar nome da interface
+   
+   ip addr flush dev eth0 - Atualizar ips
+
+   ip addr ls enp0s3 - Ver o ip de interface específica
+
+   ip route show - Tabela de roteamento
+
+   ip route add default via 192.168.100.10 - Adicionar gateway padrao
+
+   ip neigh - Consultar tabela ARP
+
+   ip help - Ajuda dos comandos de ip
