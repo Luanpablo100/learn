@@ -26,6 +26,8 @@ git push -u origin master       // Enviar arquivos para a origem origin na branc
 
 git checkout -b <<Nome da branch>>      // Criar branch e trocar para ela
 
+git checkout --track -b <apelido_do_branch_local> <apelido_do_repositório_remoto>/<apelido_do_branch_remoto> // Clonar uma branch remota e uní-la main
+
 git branch -D <<Nome da branch>>        // Deletar branch
 
 git push origin <<branch>>          // Enviar branch para repositório remoto
