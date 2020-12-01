@@ -1,13 +1,14 @@
 function intervalo () {
-    console.log("Mensagem constante")
+    console.log("Constant messege")
 }
 
 function timeout() {
-  console.log('Mensagem após 1s')
+  console.log('Messege after one sec')
 }
 
 setInterval(intervalo, 3000) //- exibe algo em um intervalo de tempo varias vezes
 setTimeout(timeout, 1000) // exibe algo em um intervalo de tempo apenas um vez
+
 
 function callback() {
 // Função a ser executada a cada 1 segundo
