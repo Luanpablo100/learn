@@ -1,0 +1,35 @@
+enable - Entrar no modo privilegiado
+disable - Entrar no usuário comum
+
+show interfaces - Mostra as interfaces de rede
+
+debug - Verificar a troca de pacotes
+
+reload - Reiniciar o equipamento
+
+configure terminal - Entra no modo de configuração global
+
+interface giga 0/0 - Configurar uma interface
+
+router rip - Configurar protocolo de roteamento rip
+
+? - Mostrar comandos disponíveis
+
+clock set "Hora:Minuto:Segundo" "Dia" "Mês" "Ano"
+
+clock timezone UTC -3 
+
+hostname "HOSTNAME"
+
+enable secret - Configurar senha de root
+
+line console 0 - Entrar na configuração da linha de comandos
+
+password "Senha" - Definir senha do console
+
+login - Criptografar a senha do console
+
+line vty 0 15 - Configurar o telnet para 15 conexões
+Para definir a senha, são os mesmos comandos do console
+
+banner motd @ - Configurar a mensagem de boas vindas
